@@ -1,0 +1,546 @@
+  [1m[35m (141.6ms)[0m  [1m[35mCREATE DATABASE `pharma_transport_development` DEFAULT CHARACTER SET `utf8mb4` /*application='PharmaTransport'*/[0m
+  [1m[35m (105.6ms)[0m  [1m[35mCREATE DATABASE `pharma_transport_development` DEFAULT CHARACTER SET `utf8mb4` /*application='PharmaTransport'*/[0m
+  [1m[35m (178.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='PharmaTransport'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-12-04 23:47:14.840916', '2025-12-04 23:47:14.840919') RETURNING "key" /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Started GET "/" for ::1 at 2025-12-04 16:51:22 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/zero/.rbenv/versions/3.4.1/lib/ruby/gems/3.4.0/gems/railties-8.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/zero/.rbenv/versions/3.4.1/lib/ruby/gems/3.4.0/gems/railties-8.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 5.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-12-04 16:51:45 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/zero/.rbenv/versions/3.4.1/lib/ruby/gems/3.4.0/gems/railties-8.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/zero/.rbenv/versions/3.4.1/lib/ruby/gems/3.4.0/gems/railties-8.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | GC: 0.0ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-12-04 17:02:21 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 12.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Migrating to CreateUsers (20251205002121)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='PharmaTransport'*/[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password_digest" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='PharmaTransport'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251205002121') RETURNING "version" /*application='PharmaTransport'*/[0m
+  [1m[36mTRANSACTION (200.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Started GET "/" for ::1 at 2025-12-04 17:26:50 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2025-12-04 17:26:56 -0700
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in '<class:User>'
+app/models/user.rb:1:in '<main>'
+app/controllers/users_controller.rb:3:in 'UsersController#new'
+Started GET "/favicon.ico" for ::1 at 2025-12-04 17:26:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/login" for ::1 at 2025-12-04 17:27:29 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 5.5ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 0.8ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/signup" for ::1 at 2025-12-04 17:27:34 -0700
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/user.rb:2:in '<class:User>'
+app/models/user.rb:1:in '<main>'
+app/controllers/users_controller.rb:3:in 'UsersController#new'
+Started GET "/signup" for ::1 at 2025-12-04 17:29:28 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | GC: 0.0ms)
+Completed 200 OK in 53ms (Views: 17.2ms | ActiveRecord: 2.5ms (0 queries, 0 cached) | GC: 9.8ms)
+
+
+Started POST "/signup" for ::1 at 2025-12-04 17:29:47 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "user" => {"email" => "[FILTERED]", "password" => "[FILTERED]", "password_confirmation" => "[FILTERED]"}, "commit" => "Sign Up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='PharmaTransport',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in 'UsersController#create'
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'brett.thomas29.97@gmail.com' LIMIT 1 /*action='create',application='PharmaTransport',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in 'UsersController#create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ('brett.thomas29.97@gmail.com', '$2a$12$jApnna8f0PydD.pFw5Rme.TbmMg.prgd7Me1RH7M0xGlvrTnLm072', '2025-12-05 00:29:47.647421', '2025-12-05 00:29:47.647421') RETURNING "id" /*action='create',application='PharmaTransport',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in 'UsersController#create'
+  [1m[36mTRANSACTION (314.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='PharmaTransport',controller='users'*/[0m
+  ↳ app/controllers/users_controller.rb:9:in 'UsersController#create'
+Redirected to http://localhost:3000/
+↳ app/controllers/users_controller.rb:11:in 'UsersController#create'
+Completed 302 Found in 609ms (ActiveRecord: 316.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-12-04 17:29:47 -0700
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='home',application='PharmaTransport',controller='pages'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Migrating to CreateDrivers (20251205003323)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='PharmaTransport'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "drivers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "latitude" decimal(10,6), "longitude" decimal(10,6), "status" varchar, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_2492e1bc43"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_drivers_on_user_id" ON "drivers" ("user_id") /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251205003323') RETURNING "version" /*application='PharmaTransport'*/[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Started DELETE "/logout" for ::1 at 2025-12-04 17:40:30 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]"}
+Redirected to http://localhost:3000/
+↳ app/controllers/sessions_controller.rb:19:in 'SessionsController#destroy'
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-12-04 17:40:30 -0700
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2025-12-04 17:40:34 -0700
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-12-04 17:40:35 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "email" => "[FILTERED]", "password" => "[FILTERED]", "commit" => "Log In"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'brett.thomas29.97@gmail.com' LIMIT 1 /*action='create',application='PharmaTransport',controller='sessions'*/[0m
+  ↳ app/controllers/sessions_controller.rb:6:in 'SessionsController#create'
+Redirected to http://localhost:3000/
+↳ app/controllers/sessions_controller.rb:10:in 'SessionsController#create'
+Completed 302 Found in 291ms (ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-12-04 17:40:36 -0700
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='home',application='PharmaTransport',controller='pages'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-12-04 17:41:05 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.8ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='home',application='PharmaTransport',controller='pages'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | GC: 1.3ms)
+Completed 200 OK in 61ms (Views: 40.2ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 11.1ms)
+
+
+Started POST "/api/drivers/1/location" for ::1 at 2025-12-04 17:42:11 -0700
+Processing by Api::DriversController#update_location as */*
+  Parameters: {"latitude" => 40.7128, "longitude" => -74.006, "status" => "active", "id" => "1", "driver" => {"latitude" => 40.7128, "longitude" => -74.006, "status" => "active"}}
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = 1 LIMIT 1 /*action='update_location',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/api/drivers_controller.rb:19:in 'Api::DriversController#set_driver'
+Filter chain halted as :set_driver rendered or redirected
+Completed 404 Not Found in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dashboard" for ::1 at 2025-12-04 17:42:33 -0700
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mDriver Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:17
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:19
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 7.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 9.2ms | ActiveRecord: 0.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/drivers/new" for ::1 at 2025-12-04 17:42:39 -0700
+Processing by DriversController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='new',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering drivers/new.html.erb within layouts/application
+  Rendered drivers/_form.html.erb (Duration: 10.5ms | GC: 0.0ms)
+  Rendered drivers/new.html.erb within layouts/application (Duration: 11.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | GC: 0.0ms)
+Completed 200 OK in 32ms (Views: 14.4ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/drivers" for ::1 at 2025-12-04 17:42:50 -0700
+Processing by DriversController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "driver" => {"name" => "bucky", "status" => "offline", "latitude" => "", "longitude" => ""}, "commit" => "Create Driver"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='create',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/drivers_controller.rb:16:in 'DriversController#create'
+  [1m[36mDriver Create (2.7ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "latitude", "longitude", "status", "user_id", "created_at", "updated_at") VALUES ('bucky', NULL, NULL, 'offline', 1, '2025-12-05 00:42:50.139448', '2025-12-05 00:42:50.139448') RETURNING "id" /*action='create',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/drivers_controller.rb:16:in 'DriversController#create'
+  [1m[36mTRANSACTION (483.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/drivers_controller.rb:16:in 'DriversController#create'
+Redirected to http://localhost:3000/drivers
+↳ app/controllers/drivers_controller.rb:17:in 'DriversController#create'
+Completed 302 Found in 495ms (ActiveRecord: 486.6ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/drivers" for ::1 at 2025-12-04 17:42:50 -0700
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering drivers/index.html.erb within layouts/application
+  [1m[36mDriver Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "drivers" WHERE "drivers"."user_id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/views/drivers/index.html.erb:11
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/views/drivers/index.html.erb:23
+  Rendered drivers/index.html.erb within layouts/application (Duration: 6.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/drivers/1/edit" for ::1 at 2025-12-04 17:43:07 -0700
+Processing by DriversController#edit as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='edit',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 AND "drivers"."id" = 1 LIMIT 1 /*action='edit',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/drivers_controller.rb:42:in 'DriversController#set_driver'
+  Rendering layout layouts/application.html.erb
+  Rendering drivers/edit.html.erb within layouts/application
+  Rendered drivers/_form.html.erb (Duration: 4.6ms | GC: 0.0ms)
+  Rendered drivers/edit.html.erb within layouts/application (Duration: 5.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.4ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started PATCH "/drivers/1" for ::1 at 2025-12-04 17:43:12 -0700
+Processing by DriversController#update as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "driver" => {"name" => "bucky", "status" => "active", "latitude" => "", "longitude" => ""}, "commit" => "Update Driver", "id" => "1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='update',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 AND "drivers"."id" = 1 LIMIT 1 /*action='update',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/drivers_controller.rb:42:in 'DriversController#set_driver'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='update',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/drivers_controller.rb:27:in 'DriversController#update'
+  [1m[36mDriver Update (2.1ms)[0m  [1m[33mUPDATE "drivers" SET "status" = 'active', "updated_at" = '2025-12-05 00:43:12.041775' WHERE "drivers"."id" = 1 /*action='update',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/drivers_controller.rb:27:in 'DriversController#update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='update',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/drivers_controller.rb:27:in 'DriversController#update'
+Redirected to http://localhost:3000/drivers
+↳ app/controllers/drivers_controller.rb:28:in 'DriversController#update'
+Completed 302 Found in 12ms (ActiveRecord: 2.5ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/drivers" for ::1 at 2025-12-04 17:43:12 -0700
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering drivers/index.html.erb within layouts/application
+  [1m[36mDriver Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "drivers" WHERE "drivers"."user_id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/views/drivers/index.html.erb:11
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/views/drivers/index.html.erb:23
+  Rendered drivers/index.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dashboard" for ::1 at 2025-12-04 17:43:24 -0700
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mDriver Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:17
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:19
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 5.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.0ms)
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 0.6ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/drivers" for ::1 at 2025-12-04 17:43:38 -0700
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering drivers/index.html.erb within layouts/application
+  [1m[36mDriver Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "drivers" WHERE "drivers"."user_id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/views/drivers/index.html.erb:11
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/views/drivers/index.html.erb:23
+  Rendered drivers/index.html.erb within layouts/application (Duration: 4.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.5ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-12-04 18:09:53 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='home',application='PharmaTransport',controller='pages'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | GC: 1.3ms)
+Completed 200 OK in 57ms (Views: 36.0ms | ActiveRecord: 1.9ms (1 query, 0 cached) | GC: 10.1ms)
+
+
+Started GET "/dashboard" for ::1 at 2025-12-04 18:09:59 -0700
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mDriver Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:17
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:19
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 15.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | GC: 0.0ms)
+Completed 200 OK in 30ms (Views: 18.2ms | ActiveRecord: 1.1ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dashboard" for ::1 at 2025-12-04 18:10:07 -0700
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mDriver Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:17
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:19
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 3.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dashboard" for ::1 at 2025-12-04 18:10:08 -0700
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mDriver Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:17
+  [1m[36mDriver Load (0.4ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:19
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.7ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dashboard" for ::1 at 2025-12-04 18:10:09 -0700
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mDriver Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:17
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:19
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/drivers" for ::1 at 2025-12-04 18:10:15 -0700
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering drivers/index.html.erb within layouts/application
+  [1m[36mDriver Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "drivers" WHERE "drivers"."user_id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/views/drivers/index.html.erb:11
+  [1m[36mDriver Load (0.4ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/views/drivers/index.html.erb:23
+  Rendered drivers/index.html.erb within layouts/application (Duration: 9.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 12.1ms | ActiveRecord: 0.9ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/drivers/new" for ::1 at 2025-12-04 18:10:18 -0700
+Processing by DriversController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='new',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering drivers/new.html.erb within layouts/application
+  Rendered drivers/_form.html.erb (Duration: 8.4ms | GC: 0.0ms)
+  Rendered drivers/new.html.erb within layouts/application (Duration: 9.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | GC: 0.0ms)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/drivers" for ::1 at 2025-12-04 18:10:38 -0700
+Processing by DriversController#create as HTML
+  Parameters: {"authenticity_token" => "[FILTERED]", "driver" => {"name" => "jon", "status" => "active", "latitude" => "-5", "longitude" => "-4"}, "commit" => "Create Driver"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='create',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/drivers_controller.rb:16:in 'DriversController#create'
+  [1m[36mDriver Create (3.1ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "latitude", "longitude", "status", "user_id", "created_at", "updated_at") VALUES ('jon', -5.0, -4.0, 'active', 1, '2025-12-05 01:10:38.767312', '2025-12-05 01:10:38.767312') RETURNING "id" /*action='create',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/drivers_controller.rb:16:in 'DriversController#create'
+  [1m[36mTRANSACTION (257.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/drivers_controller.rb:16:in 'DriversController#create'
+Redirected to http://localhost:3000/drivers
+↳ app/controllers/drivers_controller.rb:17:in 'DriversController#create'
+Completed 302 Found in 271ms (ActiveRecord: 260.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/drivers" for ::1 at 2025-12-04 18:10:39 -0700
+Processing by DriversController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering drivers/index.html.erb within layouts/application
+  [1m[36mDriver Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "drivers" WHERE "drivers"."user_id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/views/drivers/index.html.erb:11
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='drivers'*/[0m
+  ↳ app/views/drivers/index.html.erb:23
+  Rendered drivers/index.html.erb within layouts/application (Duration: 5.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.5ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dashboard" for ::1 at 2025-12-04 18:10:43 -0700
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mDriver Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:17
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:19
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.4ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/dashboard" for ::1 at 2025-12-04 18:12:54 -0700
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mDriver Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:17
+  [1m[36mDriver Load (0.5ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:19
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 5.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | GC: 0.0ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.8ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-12-04 18:13:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/" for ::1 at 2025-12-04 18:16:44 -0700
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='home',application='PharmaTransport',controller='pages'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for ::1 at 2025-12-04 18:16:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/" for ::1 at 2025-12-04 19:13:38 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='home',application='PharmaTransport',controller='pages'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | GC: 1.4ms)
+Completed 200 OK in 61ms (Views: 41.7ms | ActiveRecord: 2.3ms (1 query, 0 cached) | GC: 8.7ms)
+
+
+Started GET "/dashboard" for ::1 at 2025-12-04 19:13:44 -0700
+Processing by DashboardController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/controllers/application_controller.rb:13:in 'ApplicationController#current_user'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboard/index.html.erb within layouts/application
+  [1m[36mDriver Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:17
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."user_id" = 1 /*action='index',application='PharmaTransport',controller='dashboard'*/[0m
+  ↳ app/views/dashboard/index.html.erb:19
+  Rendered dashboard/index.html.erb within layouts/application (Duration: 17.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | GC: 0.0ms)
+Completed 200 OK in 32ms (Views: 21.1ms | ActiveRecord: 1.3ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
