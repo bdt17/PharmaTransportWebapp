@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "home/index"
+  devise_for :users
   resources :trucks
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -32,3 +34,5 @@ Rails.application.routes.draw do
   # Homepage
   root "pages#home"
 end
+devise_for :users
+root 'home#index'
