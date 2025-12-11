@@ -544,3 +544,15 @@ Processing by DashboardController#index as HTML
 Completed 200 OK in 32ms (Views: 21.1ms | ActiveRecord: 1.3ms (3 queries, 0 cached) | GC: 0.0ms)
 
 
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Migrating to CreateTrucks (20251211030718)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='PharmaTransport'*/[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "trucks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_97ffea0962"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='PharmaTransport'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_trucks_on_user_id" ON "trucks" ("user_id") /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251211030718') RETURNING "version" /*application='PharmaTransport'*/[0m
+  [1m[36mTRANSACTION (77.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2025_12_05_003323) do
+ActiveRecord::Schema[8.1].define(version: 2025_12_11_030718) do
   create_table "drivers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.decimal "latitude", precision: 10, scale: 6
@@ -22,6 +22,14 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_05_003323) do
     t.index ["user_id"], name: "index_drivers_on_user_id"
   end
 
+  create_table "trucks", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.string "name"
+    t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_trucks_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.string "email"
@@ -31,4 +39,5 @@ ActiveRecord::Schema[8.1].define(version: 2025_12_05_003323) do
   end
 
   add_foreign_key "drivers", "users"
+  add_foreign_key "trucks", "users"
 end
