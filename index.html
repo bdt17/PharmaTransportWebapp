@@ -1,89 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Pharma Transport Power Monitor</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; line-height: 1.6; color: #333; }
-        .hero { background: linear-gradient(135deg,#007bff,#0056b3); color: white; padding: 60px 20px; text-align: center; }
-        .hero h1 { font-size: 3em; margin-bottom: 20px; }
-        .hero p { font-size: 1.3em; max-width: 600px; margin: 0 auto; }
-        .demo { background: #f8f9fa; padding: 40px 20px; text-align: center; }
-        .demo pre { background: white; padding: 20px; border-radius: 8px; font-family: monospace; max-width: 600px; margin: 20px auto; display: block; }
-        .features { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 30px; padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
-        .feature { text-align: center; }
-        .pricing { background: #f8f9fa; padding: 60px 20px; }
-        .prices { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 30px; max-width: 1000px; margin: 40px auto; }
-        .price-card { background: white; border-radius: 12px; padding: 40px 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
-        .price-card h3 { color: #007bff; font-size: 2.5em; margin-bottom: 10px; }
-        .cta { background: #28a745; color: white; padding: 20px 40px; border: none; border-radius: 8px; font-size: 1.3em; cursor: pointer; text-decoration: none; display: inline-block; margin: 20px 0; }
-        .footer { text-align: center; padding: 40px 20px; background: #333; color: white; font-size: 0.9em; }
-        @media (max-width: 768px) { .hero h1 { font-size: 2em; } }
-    </style>
+<head><title>PharmaTransport - LIVE + Emergency Response</title>
+<style>body{font-family:Arial;max-width:900px;margin:auto;padding:20px;line-height:1.6;}
+.hero{background:linear-gradient(135deg,#28a745,#20c997);color:white;padding:60px;text-align:center;border-radius:12px;}
+.btn{background:white;color:#28a745;padding:20px 40px;text-decoration:none;border-radius:12px;font-size:24px;font-weight:bold;display:inline-block;box-shadow:0 8px 20px rgba(0,0,0,0.2);}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin:60px 0;}
+.feature{padding:30px;border:1px solid #ddd;border-radius:12px;background:#f8f9fa;}
+h2{color:#28a745;font-size:28px;}
+</style>
 </head>
 <body>
-    <div class="hero">
-        <h1>🚚 Pharma Transport Power Monitor</h1>
-        <p>Real-time Linux power analysis prevents $100k+ spoilage from truck power failures</p>
-    </div>
-    
-    <div class="demo">
-        <h2 style="margin-bottom: 20px;">✅ Live Demo Results</h2>
-        <pre>Bus voltages: 1.00 → 0.90 pu ✓<br>Line loading: 31% ✓<br>Real-time alerts ACTIVE</pre>
-    </div>
-    
-    <div class="features">
-        <div class="feature">
-            <h3>✅ Ubuntu Native</h3>
-            <p>Deploys anywhere, scales to 1000s trucks</p>
-        </div>
-        <div class="feature">
-            <h3>✅ Packet Capture</h3>
-            <p>Network + electrical data integration</p>
-        </div>
-        <div class="feature">
-            <h3>⚡ Power Failure Alerts</h3>
-            <p>Cold chain protection before spoilage</p>
-        </div>
-        <div class="feature">
-            <h3>📊 Real-time Analytics</h3>
-            <p>Power flow + voltage monitoring dashboard</p>
-        </div>
-    </div>
-    
-    <div class="pricing">
-        <h2 style="text-align: center; margin-bottom: 40px;">Simple Pricing</h2>
-        <div class="prices">
-            <div class="price-card">
-                <h3>$99<span style="font-size: 0.6em;">/mo</span></h3>
-                <p><strong>Starter</strong><br>1 truck monitoring</p>
-            </div>
-            <div class="price-card">
-                <h3>$499<span style="font-size: 0.6em;">/mo</span></h3>
-                <p><strong>Pro</strong><br>10 trucks + alerts + API</p>
-            </div>
-            <div class="price-card">
-                <h3>Custom</h3>
-                <p><strong>Enterprise</strong><br>Unlimited trucks + white-label</p>
-            </div>
-        </div>
-    </div>
-    
-    <div style="text-align: center; padding: 60px 20px;">
-        <a href="mailto:info@pharmatransport.org" class="cta">🚀 Start 30-Day FREE Trial</a>
-        <p style="margin-top: 20px; font-size: 1.1em;">
-            <strong>Conception:</strong> 2024-05-28 | <strong>Patent Pending</strong> | pharmatransport.org
-        </p>
-    </div>
-    
-    <div class="footer">
-        <p>© 2024 Pharma Transport Power Monitor | Built on Ubuntu + pandapower</p>
-    </div>
-<div style="text-align: center; padding: 60px 20px; background: #f8f9fa; margin: 40px 0;">
-<button type="submit" style="background: #28a745; color: white; padding: 18px 40px; border: none; border-radius: 8px; font-size: 18px; width: 100%; cursor: pointer;">Email Trial Request</button>
-</form>
+<div class="hero">
+<h1>🚀 PharmaTransport</h1>
+<p><strong>LIVE Truck Power Monitor + FUTURE Hospital Emergency Response</strong></p>
+<a href="https://pharmatransport-final.onrender.com/users/sign_up" class="btn">🚀 Start FREE Demo</a>
 </div>
+
+<div class="features">
+<div class="feature">
+<h2>✅ LIVE NOW</h2>
+<p>Real-time power monitoring → SMS alerts → Prevents $100K spoilage</p>
+</div>
+<div class="feature">
+<h2>🚑 COMING SOON</h2>
+<p>Emergency Response: Power failure → Auto-notify nearest hospital + Lyft/Paramedics for patients</p>
+<p><strong>Trusted Infrastructure:</strong> Verified rides + paramedics → Patient safety first</p>
+</div>
+<div class="feature">
+<h2>💰 $99/mo</h2>
+<p>Per truck → FDA/GDP compliant → Scale to enterprise</p>
+</div>
+</div>
+
+<footer style="text-align:center;padding:40px;background:#f8f9fa;margin-top:60px;">
+<p>PharmaTransport | LIVE SaaS + Hospital Integration Roadmap<br>
+info@pharmatransport.org</p>
+</footer>
 </body>
 </html>
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">Email: <input name="email"><button>Free Trial</button></form>
