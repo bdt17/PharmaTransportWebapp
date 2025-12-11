@@ -1,2 +1,9 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div style="max-width:800px;margin:0 auto;padding:40px;text-align:center;">
+<h1 style="color:#28a745;font-size:48px;">🚀 PharmaTransport</h1>
+<p style="font-size:24px;">Pharma truck power + temp monitoring dashboard</p>
+<% if user_signed_in? %>
+  <%= link_to "➕ Add Truck", new_truck_path, class: "btn btn-success", style:"background:#28a745;color:white;padding:15px 30px;text-decoration:none;border-radius:8px;font-size:20px;" %>
+<% else %>
+  <%= link_to "Sign Up Free", new_user_registration_path, class: "btn btn-success", style:"background:#28a745;color:white;padding:15px 30px;text-decoration:none;border-radius:8px;font-size:20px;" %>
+<% end %>
+</div>

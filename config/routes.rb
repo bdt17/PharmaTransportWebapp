@@ -36,3 +36,5 @@ Rails.application.routes.draw do
 end
 devise_for :users
 root 'home#index'
+devise_for :users
+root 'home#index'
