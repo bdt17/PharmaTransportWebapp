@@ -1,0 +1,5 @@
+1. patent_salvage.md - Invention description + timeline
+2. simple_grid.py - Working prototype code
+3. WHOIS pharmatransport.org - 2024-05-28 conception
+4. GitHub bdt17/PharmaTransportWebapp - Defensive pub
+5. simple_grid.py output screenshot
