@@ -5,3 +5,8 @@ Rails.application.routes.draw do
 resources :dashboard
   resources :trucks
 end
+resources :trucks do
+  member do
+    post :send_sms, controller: 'alerts'
+  end
+end
