@@ -619,3 +619,75 @@ Migrating to CleanDeviseUsers (20251211035007)
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='PharmaTransport'*/[0m
   [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='PharmaTransport'*/[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "drivers" /*application='PharmaTransport'*/[0m
+  [1m[35m (230.2ms)[0m  [1m[35mCREATE TABLE "drivers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "latitude" decimal(10,6), "longitude" decimal(10,6), "name" varchar, "status" varchar, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL) /*application='PharmaTransport'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_drivers_on_user_id" ON "drivers" ("user_id") /*application='PharmaTransport'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "trucks" /*application='PharmaTransport'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "trucks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "name" varchar, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL) /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_trucks_on_user_id" ON "trucks" ("user_id") /*application='PharmaTransport'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "email" varchar, "password_digest" varchar, "updated_at" datetime(6) NOT NULL) /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email") /*application='PharmaTransport'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='PharmaTransport'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='PharmaTransport'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='PharmaTransport'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='PharmaTransport'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "adrivers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "latitude" decimal(10,6), "longitude" decimal(10,6), "name" varchar, "status" varchar, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL) /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_adrivers_on_user_id" ON "adrivers" ("user_id") /*application='PharmaTransport'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "adrivers" ("id","created_at","latitude","longitude","name","status","updated_at","user_id")
+                     SELECT "id","created_at","latitude","longitude","name","status","updated_at","user_id" FROM "drivers" /*application='PharmaTransport'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "drivers" /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "drivers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "latitude" decimal(10,6), "longitude" decimal(10,6), "name" varchar, "status" varchar, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL, CONSTRAINT "fk_rails_2492e1bc43"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_drivers_on_user_id" ON "drivers" ("user_id") /*application='PharmaTransport'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "drivers" ("id","created_at","latitude","longitude","name","status","updated_at","user_id")
+                     SELECT "id","created_at","latitude","longitude","name","status","updated_at","user_id" FROM "adrivers" /*application='PharmaTransport'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "adrivers" /*application='PharmaTransport'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='PharmaTransport'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='PharmaTransport'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='PharmaTransport'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='PharmaTransport'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='PharmaTransport'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='PharmaTransport'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atrucks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "name" varchar, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL) /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_atrucks_on_user_id" ON "atrucks" ("user_id") /*application='PharmaTransport'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "atrucks" ("id","created_at","name","updated_at","user_id")
+                     SELECT "id","created_at","name","updated_at","user_id" FROM "trucks" /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "trucks" /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "trucks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "name" varchar, "updated_at" datetime(6) NOT NULL, "user_id" integer NOT NULL, CONSTRAINT "fk_rails_97ffea0962"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+) /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_trucks_on_user_id" ON "trucks" ("user_id") /*application='PharmaTransport'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "trucks" ("id","created_at","name","updated_at","user_id")
+                     SELECT "id","created_at","name","updated_at","user_id" FROM "atrucks" /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "atrucks" /*application='PharmaTransport'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='PharmaTransport'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='PharmaTransport'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='PharmaTransport'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251211030718) /*application='PharmaTransport'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-12-11 04:28:13.633008', '2025-12-11 04:28:13.633012') RETURNING "key" /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'ad37198dde6975c257bc4efca68b3c4757e5fb7e', '2025-12-11 04:28:13.637019', '2025-12-11 04:28:13.637024') RETURNING "key" /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='PharmaTransport'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='PharmaTransport'*/[0m
+Migrating to AddDeviseToUsers (20251211042809)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='PharmaTransport'*/[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL /*application='PharmaTransport'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*application='PharmaTransport'*/[0m
